@@ -1,0 +1,16 @@
+{
+  "name": "madagascar",
+  "version": "1.0.0",
+  "description": "An in-memory vanilla.js component framework",
+  "main": "src/framework/Madagascar.js",
+  "private": true,
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "(cd src && ws)"
+  },
+  "author": "Adrian Carriger",
+  "license": "MIT",
+  "devDependencies": {
+    "local-web-server": "^2.6.0"
+  }
+}
