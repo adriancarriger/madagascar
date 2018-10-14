@@ -5,8 +5,13 @@ export default class Store {
     };
   }
 
-  commit(name, value) {
+  commit(name, value, options = {}) {
+    if (this.reRender) {
+      return;
+    }
     this.ctx.mutations[name](this.state, value);
-    this.reRender = true;
+    if (options.reRender !== false) {
+      this.reRender = true;
+    }
   }
 }
