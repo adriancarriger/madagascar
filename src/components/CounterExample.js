@@ -17,6 +17,6 @@ export default class CounterExample extends Madagascar.Component {
   }
 
   mounted() {
-    this.root.querySelector('.add').addEventListener('click', () => this.$store.commit('count'));
+    this.element.querySelector('.add').addEventListener('click', () => this.$store.commit('count'));
   }
 }

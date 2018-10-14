@@ -22,6 +22,10 @@ class Madagascar {
   }
 
   renderApp() {
+    /**
+     * This would be a cool place to use something like https://www.npmjs.com/package/morphdom
+     * But who wants dependencies? 😉
+     */
     this.app.innerHTML = `<${this.appName}></${this.appName}>`;
   }
 
