@@ -9,9 +9,7 @@ export default class Component extends HTMLElement {
 
   connectedCallback() {
     this.lifecycle('beforeMount');
-    this.root = this.attachShadow({
-      mode: 'open'
-    });
+    this.element = this.getElement();
     this.baseRender();
     this.lifecycle('mounted');
   }
@@ -28,7 +26,7 @@ export default class Component extends HTMLElement {
 
   baseRender() {
     const content = this.render();
-    this.root.innerHTML = Array.isArray(content) ? content.join('\n') : content;
+    this.innerHTML = Array.isArray(content) ? content.join('\n') : content;
   }
 
   lifecycle(name) {
@@ -43,6 +41,15 @@ export default class Component extends HTMLElement {
       event,
       element,
       callback
+    });
+  }
+
+  getElement() {
+    if (!this.useShadowDom) {
+      return this;
+    }
+    return this.attachShadow({
+      mode: 'open'
     });
   }
 }
