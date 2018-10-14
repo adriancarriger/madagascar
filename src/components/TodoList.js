@@ -19,7 +19,7 @@ export default class TodoListExample extends Madagascar.Component {
   }
 
   mounted() {
-    const form = this.root.querySelector('form');
+    const form = this.element.querySelector('form');
     const input = form.querySelector('input');
 
     this.on(input, 'focus', () => {

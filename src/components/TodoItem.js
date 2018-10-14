@@ -27,7 +27,7 @@ export default class TodoItem extends Madagascar.Component {
   }
 
   mounted() {
-    this.input = this.root.querySelector('input');
+    this.input = this.element.querySelector('input');
     this.input.addEventListener('input', () => {
       this.$store.commit('updateTodo', {
         id: this.todo.id,
