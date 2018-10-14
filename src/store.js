@@ -41,7 +41,7 @@ const store = new Madagascar.Store({
   }
 });
 
-['Bye milk', 'Wash car', 'Clean house'].forEach((task) => {
+['Buy milk', 'Wash car', 'Clean house'].forEach((task) => {
   store.commit('todoInput', task, {
     reRender: false
   });
