@@ -8,6 +8,7 @@ export default class CounterExample extends Madagascar.Component {
   render() {
     return /* html */ `
       <div>
+        <h3>Counter Example</h3>
         Counter => ${this.$store.state.counter}
         <button class="add">+1</button>
         <slot></slot>
