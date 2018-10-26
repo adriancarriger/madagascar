@@ -1,4 +1,5 @@
 import Madagascar from '../framework/Madagascar.js';
+const { htmlEscape } = Madagascar;
 
 export default class TodoListExample extends Madagascar.Component {
   constructor(props) {
@@ -40,7 +41,8 @@ export default class TodoListExample extends Madagascar.Component {
     });
 
     this.on(form, 'input', event => {
-      this.$store.commit('todoInput', input.value, {
+      
+      this.$store.commit('todoInput', htmlEscape(input.value), {
         reRender: false
       });
     });
