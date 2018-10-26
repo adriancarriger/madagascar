@@ -42,5 +42,14 @@ class Madagascar {
 Madagascar.Component = Component;
 Madagascar.Store = Store;
 Madagascar.global = {};
+Madagascar.htmlEscape = (value) => {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/>/g, '&gt;')
+    .replace(/</g, '&lt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/`/g, '&#96;');
+}
 
 export default Madagascar;
