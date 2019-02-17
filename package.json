@@ -11,6 +11,6 @@
   "author": "Adrian Carriger",
   "license": "MIT",
   "devDependencies": {
-    "local-web-server": "^2.6.0"
+    "local-web-server": "2.6.1"
   }
 }
